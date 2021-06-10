@@ -1,0 +1,14 @@
+ion-card-content {
+    display: flex;
+    ion-img {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    .cargo {
+        font-weight: 600;
+    }
+    p:not(.cargo) {
+        line-height: 1;
+    }
+}
