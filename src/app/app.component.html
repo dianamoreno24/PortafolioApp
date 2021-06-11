@@ -1,8 +1,7 @@
 <ion-app>
+  <ion-content>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-
         <ion-list id="inbox-list">
           <ion-list-header>Bienvenido</ion-list-header>
           <ion-note>a mi portafolio</ion-note>
@@ -14,16 +13,40 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-        <ion-footer class="ion-no-border">
-          <ion-toolbar>
-            <ion-title>Footer</ion-title>
-          </ion-toolbar>
-        </ion-footer>
-
-      </ion-content>
-
     </ion-menu>
-
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
+  </ion-content>
+  <ion-footer>
+
+      <ion-row class="ion-align-items-center">
+        <ion-col>
+          Correo
+          <br>
+          hola@hola.com
+        </ion-col>
+        <ion-col >
+          Whatsapp
+          <br>
+          321 456 7890
+        </ion-col>
+        <ion-col>
+          Social Media
+          <br>
+          <ion-col>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="logo-instagram"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="logo-youtube"></ion-icon>
+          </ion-col>
+          <ion-col>
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </ion-col>
+        </ion-col>
+      </ion-row>
+
+  </ion-footer>
 </ion-app>
