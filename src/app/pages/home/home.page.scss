@@ -1,0 +1,80 @@
+.container {
+    background-image: linear-gradient(to bottom, transparent 20%, rgba(0, 0, 0, 0.1) 90%);
+    height: 100%;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    h1 {
+        font-size: 50px;
+        margin: 0;
+        text-transform: uppercase;
+    }
+    h3 {
+        margin-top: -10px;
+        font-weight: 300;
+    }
+    .btn {
+        display: block;
+        margin-top: 15px;
+        max-width: 35%;
+        text-transform: none;
+    }
+}
+@media (min-width: 768px) {
+    .container {
+        min-height: 400px;
+        background-image: linear-gradient(to left, transparent 20%, rgba(0, 0, 0, 0.1) 90%);
+    }
+}
+
+ion-img {
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+    &::before {
+        position: absolute;
+        content: '';
+        z-index: 1000;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(to bottom, transparent 75%, #ffffff 100%);
+    }
+}
+
+@media (min-width: 768px) {
+    ion-img {
+        &::before {
+            background-image: linear-gradient(to left, transparent 75%, #ffffff 100%);
+        }
+    }
+}
+
+svg {
+    fill: rgba(0, 0, 0, 0.1);
+    position: absolute;
+}
+.cirle-a {
+	bottom: 0px;
+	left: -20px;
+}
+.cirle-b {
+	top: 20px;
+	right: 70%;
+}
+@media (min-width: 768px) {
+    .circle-b {
+        top: -30px;
+    }
+}
+.cirle-c {
+	top: 50px;
+	right: 10px;
+}
+.cirle-d {
+	top: 195px;
+	right: 145px;
+}
