@@ -1,11 +1,53 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Contact</ion-title>
+    <ion-title>Contacto</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form [formGroup]="formContact" (ngSubmit)="onSubmit()" novalidate>
 
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input formControlName="name" type="text"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.name.errors?.required">
+      Nombre es requerido.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.name.errors?.minlength">
+      Debe tener al menos 3 letras.
+    </span>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Email</ion-label>
+      <ion-input formControlName="email" type="email"></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.required">
+      Email es requerido.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.email.errors?.pattern">
+      Ingresa un email válido.
+    </span>
+
+
+
+    <ion-item lines="full">
+      <ion-label position="floating">Mensaje</ion-label>
+      <ion-input maxlength="100" formControlName="message" type="text" required></ion-input>
+    </ion-item>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.message.errors?.required">
+      Escribeme un mensaje.
+    </span>
+    <span class="error ion-padding" *ngIf="submitted && errorCtr.message.errors?.pattern">
+      Solo letras y números.
+    </span>
+
+    <ion-row>
+      <ion-col>
+        <ion-button type="submit" color="primary" expand="block">Enviar</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
 
 
 </ion-content>
